@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 scopes = "playlist-read-collaborative%20playlist-modify-public%20playlist-read-private%20playlist-modify-private%20user-library-read"
 state = 123
-redirect_uri = "http://127.0.0.1:5000/actions"
+redirect_uri = "http://localhost:5000/actions"
 refresh_token = ""
 
 @app.route("/")
