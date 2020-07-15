@@ -1,0 +1,15 @@
+{% extends "template.html" %}
+
+{% block body %}
+<div style="position:sticky;top:0;z-index:2;width:100%;background-color:rgb(14, 11, 11);border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#1DB954;">
+  <h1 style="text-align:center; padding-top:20px;padding-bottom:10px;" class="text">ENTER PLAYLIST NAME</h1>
+</div>
+<div class="container3">
+  <div class="center">
+  <form method="POST" style="text-align:center" action="/create_new_playlist">
+    <input type="text" id="playlist_name" name="playlist_name" placeholder="Playlist Name..">
+    <button type="submit" class="button text">SUBMIT</button>
+  </form>
+</div>
+</div>
+{% endblock %}

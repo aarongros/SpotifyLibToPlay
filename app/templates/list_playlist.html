@@ -1,0 +1,18 @@
+{% extends "template.html" %}
+
+{% block body %}
+  <div style="position:sticky;top:0;z-index:2;width:100%;background-color:rgb(14, 11, 11);border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#1DB954;">
+    <h1 style="text-align:center; padding-top:20px;padding-bottom:10px;" class="text">CHOOSE WHICH PLAYLIST TO UPDATE</h1>
+  </div>
+  {% for playlist in playlists %}
+  <div class="container3">
+    <div class="center">
+      <form method="POST" action='/update_playlist'>
+        <div style="margin-bottom: 5px;">
+          <button type="submit" id="playlist" class="button text" name="playlist" value="{{ loop.index }}">{{ playlist }}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  {% endfor %}
+{% endblock %}

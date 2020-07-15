@@ -1,0 +1,137 @@
+.container3 {
+  position: relative;
+  height: 125px;
+  z-index:1;
+  border-style: dashed;
+  border-color: blue;
+}
+
+.container2 {
+  position: relative;
+  height: 50%;
+}
+
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-style: dashed;
+  border-color: yellow;
+}
+
+.text {
+  color: white;
+  font-family: arial;
+  font-weight: bold;
+  letter-spacing: 7px;
+}
+
+.button {
+  background-color: #1DB954;
+  border: none;
+  text-align: center;
+  display: block;
+  vertical-align: middle;
+  font-weight: bold;
+  cursor: pointer;
+  height: 75px;
+  padding-left: 150px;
+  padding-right: 150px;
+  border-radius: 75px / 75px;
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.action_button {
+  background-color: #1DB954;
+  color: white;
+  border: none;
+  text-align: center;
+  display: block;
+  vertical-align: middle;
+  font-size: 250%;
+  font-weight: bold;
+  letter-spacing: 7px;
+  font-family: arial;
+  cursor: pointer;
+  height: 120px;
+  padding-left: 150px;
+  padding-right: 150px;
+  border-radius: 75px / 75px;
+}
+
+.update_button {
+  min-width: 663px;
+}
+
+.create_new_button {
+  min-width: 796px;
+}
+
+.log_in_button {
+  min-width: 867px;
+}
+
+.action_button:hover {
+  background-color: #22dd64;
+  transition-duration: 0.25s;
+}
+
+.button:hover {
+  background-color: #22dd64;
+  transition-duration: 0.25s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: rgb(25,20,20);
+}
+
+#container {
+  height: 100%;
+  position: relative;
+}
+
+#main {
+  overflow: auto;
+  padding-bottom: 10px;
+  position: absolute;
+  height: 97%;
+  /* overflow: hidden; */
+  width: 100%;
+}
+
+#footer {
+  position: relative;
+  margin-top: -10px;
+  height: 10px;
+  width: 100%;
+  clear: both;
+  background-color: #1DB954;
+}
