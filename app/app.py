@@ -16,8 +16,6 @@ refresh_token = ""
 
 @app.route("/")
 def home():
-    # redirect_uri = url_for('actions')
-    print(redirect_uri)
     return render_template("home.html")
 
 @app.route("/login")
@@ -77,14 +75,14 @@ def list_playlist():
 
 @app.route('/update_playlist', methods=['POST'])
 def update_playlist():
-    # webapi.updatePlaylistCopy(int(request.form['playlist']) - 1)
+    webapi.updatePlaylistCopy(int(request.form['playlist']) - 1)
     print(int(request.form['playlist']))
     return render_template("actions.html")
 
 
 @app.route('/create_new_playlist', methods=['POST'])
 def create_new_playlist():
-    # webapi.createPlaylistCopy(request.form['playlist_name'])
+    webapi.createPlaylistCopy(request.form['playlist_name'])
     print(request.form['playlist_name'])
     return render_template("actions.html")
 
