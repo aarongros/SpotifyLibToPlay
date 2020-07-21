@@ -6,6 +6,7 @@ import requests
 import six
 import json
 import transferSpotifyLibraryToPlaylist as webapi
+import threading
 
 app = Flask(__name__)
 
@@ -75,16 +76,21 @@ def list_playlist():
 
 @app.route('/update_playlist', methods=['POST'])
 def update_playlist():
-    webapi.updatePlaylistCopy(int(request.form['playlist']) - 1)
-    print(int(request.form['playlist']))
+    update_handler = threading.Thread(target=update,args=(int(request.form['playlist']) - 1,))
+    update_handler.start()
     return render_template("actions.html")
 
+def update(arg):
+    webapi.updatePlaylistCopy(arg)
 
 @app.route('/create_new_playlist', methods=['POST'])
 def create_new_playlist():
-    webapi.createPlaylistCopy(request.form['playlist_name'])
-    print(request.form['playlist_name'])
+    create_handler = threading.Thread(target=create,args=(request.form['playlist_name'],))
+    create_handler.start()
     return render_template("actions.html")
+
+def create(arg):
+    webapi.createPlaylistCopy(arg)
 
 if __name__ == '__main__':
 	app.run(debug=True)
